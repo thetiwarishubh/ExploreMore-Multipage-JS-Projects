@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #00c4cc;
+    --secondary-color: #0077ff;
+    --text-color: #000000;
+    --bg-color: url('/Images/sunrise-1014712.jpg') no-repeat center center fixed;
+    --container-width: 1200px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+/* FAQ Styles */
+.faq-container {
+    padding: 70px 0 40px;
+    min-height: calc(100vh - 70px);
+    margin: 20px 30px;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+.faq-subheading {
+    color: #000000;
+    font-size: 16px;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.faq-question {
+    font-size: 18px;
+    padding: 15px;
+    color: #000000;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.faq-question:hover {
+    background: rgba(0, 196, 204, 0.2);
+}
+
+.faq-answer {
+    padding: 0 15px 15px;
+    color: #000000;
+    display: none;
+    line-height: 1.5;
+}
+
+.faq-answer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+@media (max-width: 768px){
+    .faq-header h1 {
+        font-size: 24px;
+    }
+    .faq-question {
+        font-size: 16px;
+    }
+}

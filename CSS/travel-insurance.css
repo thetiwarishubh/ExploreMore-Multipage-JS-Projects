@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #00c4cc;
+    --secondary-color: #0077ff;
+    --text-color: #a9b7c3;
+    --bg-color: url('/Images/sunrise-1014712.jpg') no-repeat center center fixed;
+    --container-width: 1200px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+/* Travel Insurance Styles */
+.insurance-container {
+    padding: 70px 0 40px;
+    min-height: calc(100vh - 70px);
+    margin: 20px;
+}
+
+.insurance-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.insurance-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+.insurance-subheading {
+    color: #000000;
+    font-size: 16px;
+}
+
+.insurance-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.insurance-section {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.insurance-section h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.insurance-section p {
+    margin: 10px 0;
+}
+
+.insurance-section ul {
+    padding-left: 20px;
+}
+
+.insurance-section li {
+    margin-bottom: 10px;
+}
+
+.insurance-section address p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.insurance-section address i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.insurance-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.insurance-section a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .insurance-header h1 {
+        font-size: 24px;
+    }
+    .insurance-section h2 {
+        font-size: 20px;
+    }
+}

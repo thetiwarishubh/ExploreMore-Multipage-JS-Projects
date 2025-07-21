@@ -1,0 +1,464 @@
+:root {
+    --primary-blue: #4169e1;
+    --accent-cyan: #00c4cc;
+    --text-dark: #1a1a1a;
+    --text-muted: #666;
+    --bg-light: #f8f9fa;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.2);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Main body adjustments */
+.main-body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding-top: 10px;
+}
+
+/* Offers Section */
+.offers-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 30px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    text-align: center;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-dark);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Destinations Section */
+.destinations-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 60px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    text-align: center;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-dark);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .offers-section,
+    .destinations-section {
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Promo Banner */
+.promo-banner {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    animation: glow 3s ease-in-out infinite alternate;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shine 2s infinite;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4); }
+    100% { box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6); }
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Section Headings */
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading .tagline {
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.section-heading .title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.offers-subheading,
+.destinations-subheading {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+/* Card Containers */
+.offers-container,
+.destinations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* Cards */
+.offer-card,
+.destination-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    flex: 1 1 280px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-card:hover,
+.destination-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card img,
+.destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover img,
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.offer-content,
+.destination-content {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-content h3,
+.destination-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.offer-content p,
+.destination-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.destination-rating {
+    text-decoration: none;
+    margin-left: 6px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.offer-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 12px 0;
+    color: var(--text-muted);
+}
+
+.offer-info del {
+    color: #888;
+    margin-left: 4px;
+}
+
+.offer-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.countdown {
+    font-size: 14px;
+    color: #e63946;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.rating {
+    font-size: 14px;
+    color: #f39c12;
+    margin: 8px 0;
+}
+
+.rating span {
+    color: var(--text-muted);
+    margin-left: 6px;
+}
+
+.book-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--primary-blue);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+    background-color: #375de7;
+    transform: scale(1.02);
+}
+
+.book-btn:focus {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 2px;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #000000;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--accent-cyan);
+    transform: scale(1.05);
+}
+
+.filter-btn:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offers-section,
+    .destinations-section {
+        padding: 40px 16px;
+        margin: 40px 16px;
+    }
+
+    .section-heading .title {
+        font-size: 24px;
+    }
+
+    .offers-subheading,
+    .destinations-subheading {
+        font-size: 14px;
+    }
+
+    .filter-bar {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .promo-banner {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading .title {
+        font-size: 20px;
+    }
+
+    .offers-subheading,
+    .destinations-subheading {
+        font-size: 13px;
+    }
+
+    .offer-content h3,
+    .destination-content h3 {
+        font-size: 16px;
+    }
+
+    .offer-content p,
+    .destination-content p {
+        font-size: 13px;
+    }
+
+    .offer-info,
+    .countdown,
+    .rating {
+        font-size: 13px;
+    }
+
+    .book-btn {
+        padding: 8px 0;
+        font-size: 13px;
+    }
+
+    .offer-badge {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .promo-banner {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 320px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Dark Mode Styles */
+.dark-mode .main-body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.dark-mode .offers-section,
+.dark-mode .destinations-section {
+    background: rgba(42, 42, 42, 0.95);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .dark-mode .offers-section,
+    .dark-mode .destinations-section {
+        background-color: rgba(42, 42, 42, 0.85);
+        backdrop-filter: blur(15px);
+    }
+}
+
+.dark-mode .section-heading .tagline {
+    color: #00c4cc;
+}
+
+.dark-mode .section-heading .title {
+    color: #ffffff;
+}
+
+.dark-mode .offers-subheading,
+.dark-mode .destinations-subheading {
+    color: #e0e0e0;
+}
+
+.dark-mode .offer-card,
+.dark-mode .destination-card {
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .offer-card:hover,
+.dark-mode .destination-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .offer-content h3,
+.dark-mode .destination-content h3 {
+    color: #ffffff;
+}
+
+.dark-mode .offer-content p,
+.dark-mode .destination-content p {
+    color: #b0b0b0;
+}
+
+.dark-mode .destination-rating {
+    color: #b0b0b0;
+}
+
+.dark-mode .offer-info {
+    color: #b0b0b0;
+}
+
+.dark-mode .offer-info del {
+    color: #888888;
+}
+
+.dark-mode .countdown {
+    color: #ff6b6b;
+}
+
+.dark-mode .rating span {
+    color: #b0b0b0;
+}
+
+.dark-mode .filter-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+.dark-mode .filter-btn:hover,
+.dark-mode .filter-btn.active {
+    background-color: #00c4cc;
+    color: #ffffff;
+}

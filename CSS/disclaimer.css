@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #00c4cc;
+    --secondary-color: #0077ff;
+    --text-color: #000000;
+    --bg-color: url('/Images/sunrise-1014712.jpg') no-repeat center center fixed;
+    --container-width: 1200px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Disclaimer Styles */
+.disclaimer-container {
+    padding: 70px 0 40px;
+    min-height: calc(100vh - 70px);
+    margin: 20px 30px;
+}
+
+.disclaimer-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.disclaimer-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+.disclaimer-subheading {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.disclaimer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.disclaimer-section {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.disclaimer-section h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.disclaimer-section p {
+    margin: 10px 0;
+}
+
+.disclaimer-section address p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.disclaimer-section address i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.disclaimer-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.disclaimer-section a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .disclaimer-header h1 {
+        font-size: 24px;
+    }
+    .disclaimer-section h2 {
+        font-size: 20px;
+    }
+}

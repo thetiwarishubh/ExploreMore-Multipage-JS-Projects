@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore More</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/search.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left-item">
+                <h1 class="company-name">ExploreMore</h1>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar-center-item">
+                <ul>
+                    <li class="nav-link home-button"><a href="/HTML/index.html">Home</a></li>
+                    <li class="nav-link destination-button"><a href="/HTML/featured.html">Destinations</a></li>
+                    <li class="nav-link tours-button"><a href="/HTML/tours.html">Tours</a></li>
+                    <li class="nav-link about-button"><a href="/HTML/about.html">About Us</a></li>
+                    <li class="nav-link contact-button"><a href="/HTML/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="navbar-right-item">
+                <button class="book-now-btn pulse">Book Now</button>
+                <button class="login-btn active">Login or SignUp</button>
+                <button id="toggleTheme" class="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <!-- <button class="signup-btn">Sign Up</button> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container" style="display: none;">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search tours, destinations...">
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="search-filters">
+            <select class="filter-category">
+                <option value="">All Categories</option>
+                <option value="adventure">Adventure</option>
+                <option value="beach">Beach</option>
+                <option value="cultural">Cultural</option>
+                <option value="mountain">Mountain</option>
+                <option value="city">City</option>
+                <option value="cruise">Cruise</option>
+                <option value="desert">Desert</option>
+                <option value="island">Island</option>
+            </select>
+            <select class="filter-price">
+                <option value="">All Prices</option>
+                <option value="0-1000">$0 - $1000</option>
+                <option value="1000-2000">$1000 - $2000</option>
+                <option value="2000+">$2000+</option>
+            </select>
+            <select class="filter-duration">
+                <option value="">All Durations</option>
+                <option value="1-3">1-3 Days</option>
+                <option value="4-7">4-7 Days</option>
+                <option value="8+">8+ Days</option>
+            </select>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <main class="main-body">
+        <div class="main-body-container">
+            <div class="main-context">
+                <h1 class="main-content">
+                    Explore the <span class="main-content-text">Unseen,
+                        Live</span> the Unexpected.
+                </h1>
+                <button class="explore-now-btn pulse">
+                    Explore Now
+                </button>
+            </div>
+        </div>
+        <section id="destinations" class="top-destinations">
+            <div class="section-heading">
+                <p class="tagline">Top Selling</p>
+                <h2 class="title">Explore Top Destinations</h2>
+            </div>
+
+            <div class="cards-container">
+
+                <!-- Card 1 - Active -->
+                <div class="destination-card active">
+                    <img src="/Images/burj-khalifa-2212978.jpg" alt="Floating Islands">
+                    <div class="card-content">
+                        <h3>World Tallest Skyscrapper in Dubai</h3>
+                        <p class="location"><span>📍</span> <a href="#">Dubai</a></p>
+                        <div class="info-row">
+                            <div class="rating">⭐ 5.0 Superb</div>
+                            <div class="price">$1270</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="destination-card">
+                    <img src="/Images/switzerland.jpg" alt="Kayak">
+                    <div class="card-content">
+                        <h3>Enjoy the best view of switzerland experience</h3>
+                        <p class="location"><span>📍</span> <a href="#">Switzerland</a></p>
+                        <div class="info-row">
+                            <div class="rating">⭐ 4.5 Good</div>
+                            <div class="price">$1350</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="destination-card invisible">
+                    <img src="/Images/venice-3183168.jpg" alt="Desert">
+                    <div class="card-content">
+                        <h3>Enjoy the beauty of the Floating Islands</h3>
+                        <p class="location"><span>📍</span> <a href="#">Venice</a></p>
+                        <div class="info-row">
+                            <div class="rating">⭐ 4.0 Good</div>
+                            <div class="price">$780</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="destination-card invisible">
+                    <img src="/Images/switzerland.jpg" alt="Kayak">
+                    <div class="card-content">
+                        <h3>Enjoy the best view of switzerland experience</h3>
+                        <p class="location"><span>📍</span> <a href="#">Switzerland</a></p>
+                        <div class="info-row">
+                            <div class="rating">⭐ 4.5 Good</div>
+                            <div class="price">$1350</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tours" class="tours-section scroll-wrapper">
+            <div class="section-heading">
+                <p class="tagline">Popular Packages</p>
+                <h2 class="title">Our Best Tour Packages</h2>
+            </div>
+
+            <div class="tours-container scroll-track">
+                <!-- Tour Card 1 -->
+                <div class="tour-card scroll-item">
+                    <img src="/Images/kerala.jpg" alt="Adventure Tour">
+                    <div class="tour-content">
+                        <h3>Adventure Tour</h3>
+                        <p>Perfect for thrill-seekers! Includes trekking, rafting, and more.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 5 Days</span>
+                            <span>💰 $999</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Tour Card 2 -->
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/goa.avif" alt="Beach Tour">
+                    <div class="tour-content">
+                        <h3>Beach Tour</h3>
+                        <p>Relax and enjoy the most beautiful beaches and sunsets.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 3 Days</span>
+                            <span>💰 $799</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Tour Card 3 -->
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/rajasthan.avif" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>Cultural Tour</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/mountain.jfif" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>Mountain Escape</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/Island Hopping.jpg" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>Island Hopping Tour</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/City Tour.jpg" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>City Tour</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="tour-card scroll-item">
+                    <img src="/Images/kerala.jpg" alt="Adventure Tour">
+                    <div class="tour-content">
+                        <h3>Adventure Tour</h3>
+                        <p>Perfect for thrill-seekers! Includes trekking, rafting, and more.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 5 Days</span>
+                            <span>💰 $999</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Tour Card 2 -->
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/goa.avif" alt="Beach Tour">
+                    <div class="tour-content">
+                        <h3>Beach Tour</h3>
+                        <p>Relax and enjoy the most beautiful beaches and sunsets.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 3 Days</span>
+                            <span>💰 $799</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Tour Card 3 -->
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/rajasthan.avif" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>Cultural Tour</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/mountain.jfif" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>Mountain Escape</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/Island Hopping.jpg" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>Island Hopping Tour</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="tour-card scroll-item">
+                    <img src="/Tour-images/City Tour.jpg" alt="Cultural Tour">
+                    <div class="tour-content">
+                        <h3>City Tour</h3>
+                        <p>Explore the rich culture, heritage sites, and local traditions.</p>
+                        <div class="tour-info">
+                            <span>⏱️ 4 Days</span>
+                            <span>💰 $899</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="blog" class="blog-section">
+            <div class="section-heading">
+                <p class="tagline">Travel Insights</p>
+                <h2 class="title">Latest Travel Blogs</h2>
+            </div>
+            <div class="blog-container">
+                <div class="blog-card">
+                    <img src="/Tour-images/paris.jpg" alt="Paris Blog">
+                    <div class="blog-content">
+                        <h3>Romantic Paris Getaway</h3>
+                        <p>Experience the city of love like never before.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="/Tour-images/tokyo-tower-825196_640.jpg" alt="Tokyo Blog">
+                    <div class="blog-content">
+                        <h3>Tokyo Nightlife Guide</h3>
+                        <p>Discover the vibrant night scene in Japan's capital.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card invisible">
+                    <img src="/Tour-images/santorini-4996846_640.jpg" alt="Santorini Blog">
+                    <div class="blog-content">
+                        <h3>Santorini Sunset Spots</h3>
+                        <p>Best places to watch the sunset in Santorini.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card invisible">
+                    <img src="/Tour-images/City Tour.jpg" alt="New York Blog">
+                    <div class="blog-content">
+                        <h3>New York in 3 Days</h3>
+                        <p>How to make the most of a short NYC trip.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card invisible">
+                    <img src="/Tour-images/bali.jpg" alt="Bali Blog">
+                    <div class="blog-content">
+                        <h3>Bali Hidden Gems</h3>
+                        <p>Secret spots away from tourist crowds.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card invisible">
+                    <img src="/Tour-images/cairo-6681518_640.jpg" alt="Cairo Blog">
+                    <div class="blog-content">
+                        <h3>Ancient Egypt Exploration</h3>
+                        <p>Uncover the mysteries of the pyramids.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card invisible">
+                    <img src="/Tour-images/iceland-4649477_640.jpg" alt="Iceland Blog">
+                    <div class="blog-content">
+                        <h3>Northern Lights in Iceland</h3>
+                        <p>Best places and times to witness the Aurora Borealis.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card invisible">
+                    <img src="/Tour-images/dubai.jpg" alt="Dubai Blog">
+                    <div class="blog-content">
+                        <h3>Luxury Travel in Dubai</h3>
+                        <p>Experience world-class hotels, deserts, and futuristic architecture.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="testimonials" class="testimonials-section scroll-wrapper">
+            <div class="section-heading">
+                <p class="tagline">What They Say</p>
+                <h2 class="title">Customer Testimonials</h2>
+            </div>
+            <div class="testimonials-container scroll-track">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card scroll-item">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Absolutely breathtaking experience! The guides were knowledgeable and
+                        the itinerary was perfect. We saw everything we wanted and more."</p>
+                    <div class="author-info">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson"
+                            class="author-img">
+                        <div>
+                            <p class="testimonial-author">Sarah Johnson</p>
+                            <p class="author-location">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card scroll-item">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Our family vacation was seamless thanks to this agency. They handled
+                        all the details and created memories we'll cherish forever."</p>
+                    <div class="author-info">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen" class="author-img">
+                        <div>
+                            <p class="testimonial-author">Michael Chen</p>
+                            <p class="author-location">Toronto, Canada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card scroll-item">
+                    <div class="rating">★★★★☆</div>
+                    <p class="testimonial-text">"The cultural immersion was incredible. We experienced authentic local
+                        life that we never would have found on our own."</p>
+                    <div class="author-info">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel"
+                            class="author-img">
+                        <div>
+                            <p class="testimonial-author">Priya Patel</p>
+                            <p class="author-location">Mumbai, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card scroll-item">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"As a solo traveler, I felt completely safe and supported throughout my
+                        journey. The team went above and beyond my expectations."</p>
+                    <div class="author-info">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Emma Wilson"
+                            class="author-img">
+                        <div>
+                            <p class="testimonial-author">Emma Wilson</p>
+                            <p class="author-location">London, UK</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card scroll-item">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"The luxury accommodations were worth every penny! Attention to detail
+                        was impeccable and the service was world-class."</p>
+                    <div class="author-info">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="David Müller" class="author-img">
+                        <div>
+                            <p class="testimonial-author">David Müller</p>
+                            <p class="author-location">Berlin, Germany</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card scroll-item">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Our honeymoon was magical thanks to this agency. They surprised us with
+                        romantic touches we'll never forget."</p>
+                    <div class="author-info">
+                        <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="Sophia Rodriguez"
+                            class="author-img">
+                        <div>
+                            <p class="testimonial-author">Sophia Rodriguez</p>
+                            <p class="author-location">Barcelona, Spain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal" id="booking-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Book Your Tour</h2>
+                <form class="booking-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="date" required>
+                    <input type="number" placeholder="Number of People" min="1" required>
+                    <button type="submit">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <h3 class="footer-logo">ExploreMore</h3>
+                <p class="footer-description">Your gateway to unforgettable adventures and hidden gems across the globe.
+                </p>
+                <div class="trust-badges">
+                    <img src="/PNG//Trustpilot Logo PNG s.png">
+                    <img src="/PNG/TripAdvisor Excellence.png" alt="TripAdvisor Excellence">
+                </div>
+                <div class="footer-social">
+                    <a target="_blank" href="https://www/facebook.com" class="social-link"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://www.twitter.com" class="social-link"><i
+                            class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com" class="social-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section footer-links">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-all-links">
+                    <li><a href="/HTML/index.html" class="footer-link">Home</a></li>
+                    <li><a target="_blank" href="/HTML/featured.html" class="footer-link">Destinations</a></li>
+                    <li><a target="_blank" href="/HTML/tours.html" class="footer-link">Tours</a></li>
+                    <li><a target="_blank" href="/HTML/about.html" class="footer-link">About Us</a></li>
+                    <li><a target="_blank" href="/HTML/contact.html" class="footer-link">Contact</a></li>
+                    <li><a target="_blank" href="/HTML/travel-blog.html" class="footer-link">Travel Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-support">
+                <h4 class="footer-heading">Support</h4>
+                <ul class="footer-all-links">
+                    <li><a target="_blank" href="/HTML/faq.html" class="footer-link">FAQ</a></li>
+                    <li><a target="_blank" href="/HTML/privacy-policy.html" class="footer-link">Privacy Policy</a></li>
+                    <li><a target="_blank" href="/HTML/terms-conditions.html" class="footer-link">Terms & Conditions</a>
+                    </li>
+                    <li><a target="_blank" href="/HTML/desclaimer.html" class="footer-link">Disclaimer</a></li>
+                    <li><a target="_blank" href="/HTML/travel-insurance.html" class="footer-link">Travel Insurance</a>
+                    </li>
+                </ul>
+                <div class="payment-methods">
+                    <h5>We Accept</h5>
+                    <div class="payment-icons">
+                        <img src="/PNG/visa-icon.svg" alt="Visa">
+                        <img src="/PNG/master-card-icon.svg" alt="Mastercard">
+                        <img src="/PNG/american-express.svg" alt="American Express">
+                        <img src="/PNG/bhim-app-icon.svg" alt="UPI">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4 class="footer-heading">Get in Touch</h4>
+                <p class="contact-info"><i class="fas fa-envelope"></i> info@exploremore.com</p>
+                <p class="contact-info"><i class="fas fa-phone"></i> +91-123-456-7890</p>
+                <p class="contact-info"><i class="fas fa-map-marker-alt"></i> 123 Adventure Lane, Mumbai, India</p>
+                <div class="live-support">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>24/7 Live Support</span>
+                </div>
+                <div class="language-switcher">
+                    <select>
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="mr">मराठी</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h4 class="footer-heading">Subscribe</h4>
+                <p class="newsletter-text">Stay updated with our latest offers and travel tips!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <div class="subscription-message" id="subscriptionMessage"></div>
+                <div class="download-app">
+                    <h5>Download Our App</h5>
+                    <div class="app-stores">
+                        <a target="_blank" href="https://play.google.com/"><img src="/PNG/google-play-svgrepo-com.svg"
+                                alt="Google Play"></a>
+                        <a target="_blank" href="https://www.apple.com/in/app-store/"><img
+                                src="/PNG/app-store-svgrepo-com.svg" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 ExploreMore. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <div class="support-icon pulse" id="supportIcon">
+        <i class="fas fa-robot"></i>
+    </div>
+    <div class="ai-chat-container" id="aiChatContainer">
+        <div class="chat-header">
+            <h3>Travel Assistant</h3>
+            <button class="close-chat" id="closeChat">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="bot-message">
+                <p>Hello! I'm your travel assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ask about destinations...">
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <script src="/JS/app.js"></script>
+    <script src="/JS/search.js"></script>
+    <script src="/JS/theme-toggle.js"></script>
+</body>
+
+</html>

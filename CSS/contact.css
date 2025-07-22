@@ -158,3 +158,28 @@ body {
         margin: 0;
     }
 }
+
+body.dark-mode .contact-section,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form  {
+    background-color: rgba(30, 30, 30, 0.9);
+} 
+
+body.dark-mode .title-contact,
+body.dark-mode .contact-subheading,
+body.dark-mode .contact-info p,
+body.dark-mode .contact-info p strong {
+    color: #ffffff;
+}
+
+
+body.dark-mode .about-section {
+    border: 1px solid #ffffff;
+}
+
+body.dark-mode .about-section p {
+    color: #ffffff;
+}
+body.dark-mode .about-section ul li{
+    color: #ffffff;
+}

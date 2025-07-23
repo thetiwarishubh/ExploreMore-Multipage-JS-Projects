@@ -152,3 +152,11 @@
         font-size: 14px;
     }
 }
+
+body.dark-mode .search-container {
+    background-color: #121212;
+}
+
+body.dark-mode .tours-subheading {
+    color: #ffffff;
+}

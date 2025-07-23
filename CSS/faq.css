@@ -94,3 +94,18 @@ body {
         font-size: 16px;
     }
 }
+
+body.dark-mode .faq-container {
+    background-color: #121212;
+} 
+
+body.dark-mode .faq-item {
+    border: 1px solid #ffffff;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+}
+
+body.dark-mode .faq-item h2 ,
+body.dark-mode .faq-item p,
+body.dark-mode .faq-subheading {
+    color: #ffffff;
+}

@@ -94,3 +94,18 @@ address i {
         font-size: 20px;
     }
 }
+
+body.dark-mode .privacy-container {
+    background-color: #121212;
+} 
+
+body.dark-mode .policy-section {
+    border: 1px solid #ffffff;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+}
+
+body.dark-mode .policy-section h2 ,
+body.dark-mode .policy-section p,
+body.dark-mode .policy-section ul li {
+    color: #ffffff;
+}

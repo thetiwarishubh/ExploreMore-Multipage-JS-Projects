@@ -101,3 +101,19 @@ body {
         font-size: 20px;
     }
 }
+
+body.dark-mode .insurance-container {
+    background-color: #121212;
+} 
+
+body.dark-mode .insurance-section {
+    border: 1px solid #ffffff;
+    box-shadow: rgba(253, 253, 253, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+}
+
+body.dark-mode .insurance-section h2 ,
+body.dark-mode .insurance-section p,
+body.dark-mode .insurance-section ul li,
+body.dark-mode .insurance-subheading {
+    color: #ffffff;
+}

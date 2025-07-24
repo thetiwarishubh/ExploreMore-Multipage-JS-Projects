@@ -43,11 +43,7 @@ if (loginBtn) {
   loginBtn.addEventListener("click", () => {
     window.location.href = "login.html";
   });
-}
-
-  // signupBtn.addEventListener('click', ()=> {
-  //   window.location.href = "sign-up.html"
-  // })
+};
 
   // Modal Toggle
   const modals = document.querySelectorAll(".modal");
